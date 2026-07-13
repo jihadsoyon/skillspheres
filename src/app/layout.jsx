@@ -12,8 +12,11 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "SkillSphere",
-  description: "Online Learning Platform",
+  title: {
+    default: "SkillSphere",
+    template: "%s | SkillSphere",
+  },
+  description: "Modern Online Learning Platform",
 };
 
 export default function RootLayout({

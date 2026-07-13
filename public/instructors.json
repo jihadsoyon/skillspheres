@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "speciality": "Full Stack Developer",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Wilson",
+    "speciality": "UI UX Designer",
+    "image": "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Alex Carter",
+    "speciality": "Digital Marketing Expert",
+    "image": "https://randomuser.me/api/portraits/men/22.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Emily Davis",
+    "speciality": "Graphic Designer",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg"
+  }
+]

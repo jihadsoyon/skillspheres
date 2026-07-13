@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 Hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "category": "Development",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200",
+    "description": "Learn full-stack web development from scratch using HTML, CSS, JavaScript, React, Node.js, MongoDB and Next.js.",
+    "curriculum": [
+      "HTML & CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Next.js"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "UI UX Design Masterclass",
+    "instructor": "Sarah Wilson",
+    "duration": "18 Hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "category": "Design",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200",
+    "description": "Master UI/UX Design using Figma with real-world projects.",
+    "curriculum": [
+      "Design Principles",
+      "Color Theory",
+      "Typography",
+      "Wireframing",
+      "Prototype",
+      "Portfolio"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Essentials",
+    "instructor": "Alex Carter",
+    "duration": "15 Hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "category": "Marketing",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+    "description": "SEO, Social Media Marketing, Google Ads and Email Marketing.",
+    "curriculum": [
+      "SEO",
+      "Google Ads",
+      "Facebook Ads",
+      "Content Marketing",
+      "Email Marketing",
+      "Analytics"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Python Programming",
+    "instructor": "David Lee",
+    "duration": "22 Hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "category": "Programming",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1200",
+    "description": "Learn Python from beginner to advanced level.",
+    "curriculum": [
+      "Variables",
+      "Loops",
+      "Functions",
+      "OOP",
+      "Modules",
+      "Projects"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Graphic Design Complete Guide",
+    "instructor": "Emily Davis",
+    "duration": "17 Hours",
+    "rating": 4.5,
+    "level": "Intermediate",
+    "category": "Design",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
+    "description": "Learn Photoshop, Illustrator and Branding.",
+    "curriculum": [
+      "Photoshop",
+      "Illustrator",
+      "Typography",
+      "Brand Identity",
+      "Print Design",
+      "Projects"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Next.js Complete Guide",
+    "instructor": "Michael Brown",
+    "duration": "20 Hours",
+    "rating": 5,
+    "level": "Advanced",
+    "category": "Development",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200",
+    "description": "Master Next.js App Router from beginner to advanced.",
+    "curriculum": [
+      "App Router",
+      "Server Components",
+      "Data Fetching",
+      "Metadata",
+      "Authentication",
+      "Deployment"
+    ]
+  }
+]
