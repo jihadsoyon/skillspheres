@@ -60,6 +60,16 @@ const LoginPage = () => {
         >
           Login
         </button>
+        
+        <div className="divider">
+          OR
+        </div>
+
+        <button
+          className="btn btn-outline w-full"
+        >
+          Continue with Google
+        </button>
 
       </form>
 
