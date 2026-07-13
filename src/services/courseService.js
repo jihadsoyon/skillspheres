@@ -1,8 +1,9 @@
 import { cache } from "react";
 
 export const getCourses = cache(async () => {
-  const res = await fetch("http://localhost:3000/courses.json");
-
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/courses.json`, {
+  cache: "no-store",
+});
   if (!res.ok) {
     throw new Error("Failed to fetch courses");
   }
