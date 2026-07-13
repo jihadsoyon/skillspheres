@@ -11,7 +11,7 @@ const Footer = () => {
                 <aside>
 
                     <Image
-                        src="/logo.png"
+                        src="/skillsphere.png"
                         alt="logo"
                         width={50}
                         height={50}
@@ -35,9 +35,9 @@ const Footer = () => {
                         Contact
                     </h6>
 
-                    <a>Email : support@skillsphere.com</a>
+                    <a>Email : jihadsoyon@gmail.com</a>
 
-                    <a>Phone : +8801700000000</a>
+                    <a>Phone : +8801723889959</a>
 
                 </nav>
 

@@ -30,8 +30,9 @@ const LoginPage = () => {
 
   return (
 
-    <div className="max-w-md mx-auto py-20">
+    <div className="card bg-base-100 shadow-xl border max-w-md mx-auto mt-40">
 
+      <div className="card-body">
       <h1 className="text-4xl font-bold mb-8">
 
         Login
@@ -60,8 +61,8 @@ const LoginPage = () => {
         >
           Login
         </button>
-        
-        <div className="divider">
+         
+         <div className="divider">
           OR
         </div>
 
@@ -70,9 +71,10 @@ const LoginPage = () => {
         >
           Continue with Google
         </button>
+        
 
       </form>
-
+      </div>
     </div>
 
   );

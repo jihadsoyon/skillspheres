@@ -19,7 +19,7 @@ const Banner = () => {
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
 
-              Upgrade Your Skills Today 🚀
+              Upgrade Your Skills Today 
 
             </h1>
 

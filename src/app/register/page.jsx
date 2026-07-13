@@ -12,7 +12,7 @@ export default function RegisterForm() {
 
   return (
 
-    <div className="card bg-base-100 shadow-xl border max-w-md mx-auto">
+    <div className="card bg-base-100 shadow-xl border max-w-md mx-auto mt-40">
 
       <div className="card-body">
 
