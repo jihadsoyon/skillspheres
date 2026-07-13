@@ -2,86 +2,96 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
-  return (
+    return (
 
-    <footer className="bg-base-200 mt-20">
+        <footer className="bg-base-200 mt-20">
 
-      <div className="max-w-7xl mx-auto footer sm:footer-horizontal p-10">
+            <div className="max-w-7xl mx-auto footer sm:footer-horizontal p-10">
 
-        <aside>
+                <aside>
 
-          <Image
-            src="/logo.png"
-            alt="logo"
-            width={50}
-            height={50}
-          />
+                    <Image
+                        src="/logo.png"
+                        alt="logo"
+                        width={50}
+                        height={50}
+                    />
 
-          <p className="font-bold">
+                    <p className="font-bold">
 
-            SkillSphere
+                        SkillSphere
 
-            <br />
+                        <br />
 
-            Learn Skills From Industry Experts.
+                        Learn Skills From Industry Experts.
 
-          </p>
+                    </p>
 
-        </aside>
+                </aside>
 
-        <nav>
+                <nav>
 
-          <h6 className="footer-title">
-            Contact
-          </h6>
+                    <h6 className="footer-title">
+                        Contact
+                    </h6>
 
-          <a>Email : support@skillsphere.com</a>
+                    <a>Email : support@skillsphere.com</a>
 
-          <a>Phone : +8801700000000</a>
+                    <a>Phone : +8801700000000</a>
 
-        </nav>
+                </nav>
 
-        <nav>
+                <nav>
 
-          <h6 className="footer-title">
-            Follow Us
-          </h6>
+                    <h6 className="footer-title">
+                        Follow Us
+                    </h6>
 
-          <Link href="https://facebook.com">
-            Facebook
-          </Link>
+                    <Link href="https://facebook.com">
+                        Facebook
+                    </Link>
 
-          <Link href="https://linkedin.com">
-            LinkedIn
-          </Link>
+                    <Link href="https://linkedin.com">
+                        LinkedIn
+                    </Link>
 
-          <Link href="https://github.com">
-            GitHub
-          </Link>
+                    <Link href="https://github.com">
+                        GitHub
+                    </Link>
 
-        </nav>
+                </nav>
 
-        <nav>
+                <nav>
 
-          <h6 className="footer-title">
-            Legal
-          </h6>
+                    <h6 className="footer-title">
+                        Legal
+                    </h6>
 
-          <Link href="#">
-            Privacy Policy
-          </Link>
+                    <Link href="#">
+                        Privacy Policy
+                    </Link>
 
-          <Link href="#">
-            Terms & Conditions
-          </Link>
+                    <Link href="#">
+                        Terms & Conditions
+                    </Link>
 
-        </nav>
+                </nav>
 
-      </div>
+            </div>
+            <div className="border-t">
 
-    </footer>
+                <div className="py-5 text-center text-sm">
 
-  );
+                    © {new Date().getFullYear()} SkillSphere.
+
+                    All Rights Reserved.
+
+                </div>
+
+            </div>
+
+        </footer>
+    );
 };
 
 export default Footer;

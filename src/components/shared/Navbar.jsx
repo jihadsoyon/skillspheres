@@ -9,6 +9,8 @@ const Navbar = () => {
   // Commit-6 এ BetterAuth বসবে
 
   const user = null;
+  // TODO:
+// BetterAuth Session
 
   return (
     <div className="border-b bg-base-100 sticky top-0 z-50">
