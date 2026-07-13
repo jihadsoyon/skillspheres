@@ -9,3 +9,9 @@ export const getCourses = cache(async () => {
 
   return res.json();
 });
+
+export const getCourseById = cache(async (id) => {
+  const courses = await getCourses();
+
+  return courses.find((course) => course.id === Number(id));
+});
