@@ -1,11 +1,11 @@
-export const getCourses = async () => {
-  const res = await fetch("http://localhost:3000/courses.json", {
-    cache: "no-store",
-  });
+import { cache } from "react";
+
+export const getCourses = cache(async () => {
+  const res = await fetch("http://localhost:3000/courses.json");
 
   if (!res.ok) {
     throw new Error("Failed to fetch courses");
   }
 
   return res.json();
-};
+});
