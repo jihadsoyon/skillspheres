@@ -3,14 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import ActiveLink from "./ActiveLink";
+import { authClient } from "@/lib/auth-client";
+import UserAvatar from "../UserAvatar";
 
 const Navbar = () => {
 
-  // Commit-6 এ BetterAuth বসবে
+  const userData = authClient.useSession()
+  const user = userData.data?.user
+  console.log(user)
 
-  const user = null;
-  // TODO:
-// BetterAuth Session
 
   return (
     <div className="border-b bg-base-100 sticky top-0 z-50">
@@ -108,39 +109,35 @@ const Navbar = () => {
 
         {/* Right */}
 
-        <div className="navbar-end">
+            <div className="navbar-end">
 
-          {!user ? (
+                {!user && (
 
-            <div className="flex gap-2">
+                  <div className="flex gap-2">
 
-              <Link
-                href="/login"
-                className="btn btn-outline btn-sm"
-              >
-                Login
-              </Link>
+                    <Link
+                      href="/login"
+                      className="btn btn-outline btn-sm"
+                    >
+                      Login
+                    </Link>
 
-              <Link
-                href="/register"
-                className="btn btn-primary btn-sm"
-              >
-                Register
-              </Link>
+                    <Link
+                      href="/register"
+                      className="btn btn-primary btn-sm"
+                    >
+                      Register
+                    </Link>
 
-            </div>
+                  </div>
 
-          ) : (
+                ) }
 
-            <>
+                {
+                  user && <UserAvatar user={user} />
+                }
 
-            {/* Commit-6 */}
-
-            </>
-
-          )}
-
-        </div>
+              </div>
 
       </div>
 
