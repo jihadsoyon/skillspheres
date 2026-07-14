@@ -6,34 +6,33 @@ import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 
 const UserAvatar = ({ user }) => {
-    const handleSignOut = async() => {
-        await authClient.signOut();
+  const handleSignOut = async () => {
+    await authClient.signOut();
 
-    }
+  }
   return (
     <div className="flex items-center gap-4">
 
       <div className="relative group cursor-pointer">
 
         {user?.image ? (
-          <Image
+          <img
             src={user.image}
             alt={user.name}
-            width={40}
-            height={40}
             referrerPolicy="no-referrer"
             className="
-              w-8 h-8
-              rounded-full
-              object-cover
-              ring-2
-              ring-primary
-              ring-offset-2
-              ring-offset-base-100
-              transition-all
-              duration-300
-              group-hover:ring-4
-            "
+    w-8 h-8
+    rounded-full
+    object-cover
+    ring-2
+    ring-primary
+    ring-offset-2
+    ring-offset-base-100
+    transition-all
+    duration-300
+    group-hover:ring-4
+  "
+            
           />
         ) : (
           <div
