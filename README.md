@@ -1,6 +1,6 @@
 # 🎓 SkillSphere – Online Learning Platform
 
-SkillSphere is a modern online learning platform built with **Next.js 15**, where users can discover courses, search by category, explore instructors, and manage their learning profile through secure authentication.
+SkillSphere is a modern online learning platform built with **Next.js 16**, where users can discover courses, search by category, explore instructors, and manage their learning profile through secure authentication.
 
 🔗 **Live Site:** https://skillspheres-ochre.vercel.app/
 
@@ -40,7 +40,7 @@ The platform offers secure authentication, protected course pages, instructor pr
 
 ### Frontend
 
-- Next.js 15 (App Router)
+- Next.js 16 (App Router)
 - React 19
 - Tailwind CSS
 - DaisyUI
