@@ -2,6 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import { useSearchParams } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
 const LoginPage = () => {
 
@@ -25,6 +26,11 @@ const LoginPage = () => {
     
     console.log(redirect)
   };
+    const handleGoogleSignIn = async() => {
+    await authClient.signIn.social({
+      provider: 'google'
+    })
+  }
 
   return (
 
@@ -68,8 +74,9 @@ const LoginPage = () => {
 
           <button
             className="btn btn-outline w-full"
+            onClick={handleGoogleSignIn}
           >
-            Continue with Google
+          <GrGoogle />  Continue with Google
           </button>
 
 

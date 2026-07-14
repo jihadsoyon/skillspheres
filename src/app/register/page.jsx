@@ -3,6 +3,7 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
 export default function RegisterForm() {
 
@@ -26,6 +27,12 @@ export default function RegisterForm() {
      router.push('/login')
     }
   };
+
+  const handleGoogleSignIn = async() => {
+    await authClient.signIn.social({
+      provider: 'google'
+    })
+  }
 
   return (
 
@@ -88,8 +95,9 @@ export default function RegisterForm() {
 
         <button
           className="btn btn-outline w-full"
+          onClick={handleGoogleSignIn}
         >
-          Continue with Google
+        <GrGoogle />  Continue with Google
         </button>
 
         <p className="text-center mt-5">
