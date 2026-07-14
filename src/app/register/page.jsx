@@ -59,7 +59,7 @@ const handleGoogleSignIn = async () => {
         >
 
           <input
-            className="input input-bordered w-full"
+            className="input input-bordered w-full text-white"
             name="name"
             type="text"
             placeholder="Name"
@@ -67,7 +67,7 @@ const handleGoogleSignIn = async () => {
           />
 
           <input
-            className="input input-bordered w-full"
+            className="input input-bordered w-full text-white"
             name="email"
             type="email"
             placeholder="Email"
@@ -75,7 +75,7 @@ const handleGoogleSignIn = async () => {
           />
 
           <input
-            className="input input-bordered w-full"
+            className="input input-bordered w-full text-white"
             name="image"
             type="text"
             placeholder="Photo URL"
@@ -83,7 +83,7 @@ const handleGoogleSignIn = async () => {
           />
 
           <input
-            className="input input-bordered w-full"
+            className="input input-bordered w-full text-white"
             name="password"
             type="password"
             placeholder="Password"
