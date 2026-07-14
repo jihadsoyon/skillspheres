@@ -11,8 +11,6 @@
 // };
 
 
-
-
 export const getInstructors = async () => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_APP_URL}/instructors.json`,

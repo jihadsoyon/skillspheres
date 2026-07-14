@@ -1,13 +1,30 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function RegisterForm() {
 
-  const handleSubmit = (e) => {
+  const router = useRouter()
+
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
-    // Better Auth Register
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const {data, error} = await authClient.signUp.email({
+      name, 
+      email,
+      password,
+      image,
+    })
+    console.log({data, error});
+    if(!error){
+     router.push('/login')
+    }
   };
 
   return (
@@ -27,6 +44,7 @@ export default function RegisterForm() {
 
           <input
             className="input input-bordered w-full"
+            name="name"
             type="text"
             placeholder="Name"
             required
@@ -34,6 +52,7 @@ export default function RegisterForm() {
 
           <input
             className="input input-bordered w-full"
+            name="email"
             type="email"
             placeholder="Email"
             required
@@ -41,6 +60,7 @@ export default function RegisterForm() {
 
           <input
             className="input input-bordered w-full"
+            name="image"
             type="text"
             placeholder="Photo URL"
             required
@@ -48,6 +68,7 @@ export default function RegisterForm() {
 
           <input
             className="input input-bordered w-full"
+            name="password"
             type="password"
             placeholder="Password"
             required
