@@ -36,7 +36,7 @@ const CoursesPage = async ({ searchParams }) => {
 
             <SearchBar />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
                 {filteredCourses.length > 0 ? (
                     filteredCourses.map((course) => (
                         <CourseCard

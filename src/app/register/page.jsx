@@ -4,35 +4,44 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import toast from "react-hot-toast";
 
 export default function RegisterForm() {
 
   const router = useRouter()
 
-  const handleSubmit = async(e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const name = e.target.name.value;
-    const image = e.target.image.value;
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    const {data, error} = await authClient.signUp.email({
-      name, 
-      email,
-      password,
-      image,
-    })
-    console.log({data, error});
-    if(!error){
-     router.push('/login')
-    }
-  };
+  const name = e.target.name.value;
+  const image = e.target.image.value;
+  const email = e.target.email.value;
+  const password = e.target.password.value;
 
-  const handleGoogleSignIn = async() => {
-    await authClient.signIn.social({
-      provider: 'google'
-    })
+  const { data, error } = await authClient.signUp.email({
+    name,
+    email,
+    password,
+    image,
+  });
+
+  if (!error) {
+    toast.success("Registration Successful!");
+    router.push("/login");
+  } else {
+    toast.error(error.message || "Registration Failed");
   }
+};
+
+const handleGoogleSignIn = async () => {
+  try {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  } catch (error) {
+    toast.error("Google Sign Up Failed");
+  }
+};
 
   return (
 

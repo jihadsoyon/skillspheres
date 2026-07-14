@@ -30,7 +30,7 @@ const SearchBar = () => {
       <input
         type="text"
         placeholder="Search by course title..."
-        className="input input-bordered w-full"
+        className="input input-bordered w-full text-white"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />

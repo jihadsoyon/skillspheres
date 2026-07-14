@@ -1,5 +1,6 @@
 import CourseCard from "../courses/CourseCard";
 import { getCourses } from "@/services/courseService";
+import TrendingCourseToast from "./TrendingCourseToast";
 
 const TrendingCourses = async () => {
   const courses = await getCourses();
@@ -10,6 +11,8 @@ const TrendingCourses = async () => {
     .slice(3, 6);
 
   return (
+    <>
+  <TrendingCourseToast courses={trendingCourses} />
     <section className="py-20">
 
       <div className="text-center mb-12">
@@ -36,6 +39,7 @@ const TrendingCourses = async () => {
       </div>
 
     </section>
+    </>
   );
 };
 

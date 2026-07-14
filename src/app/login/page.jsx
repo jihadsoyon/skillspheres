@@ -3,6 +3,7 @@
 import { authClient } from "@/lib/auth-client";
 import { GrGoogle } from "react-icons/gr";
 import { useRouter, useSearchParams } from "next/navigation";
+import toast from "react-hot-toast";
 const LoginPage = () => {
   const router = useRouter();
 
@@ -13,29 +14,35 @@ const LoginPage = () => {
 
 
 
-  const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    e.preventDefault();
+  const email = e.target.email.value;
+  const password = e.target.password.value;
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    const { data, error } = await authClient.signIn.email({
-      email,
-      password,
-    });
+  const { data, error } = await authClient.signIn.email({
+    email,
+    password,
+  });
 
-    if (!error) {
-      router.push(next);
-    }
-    console.log({ data, error });
+  if (!error) {
+    toast.success("Login Successful!");
+    router.push(next);
+  } else {
+    toast.error(error.message || "Invalid email or password");
+  }
+};
 
-  };
   const handleGoogleSignIn = async () => {
+  try {
     await authClient.signIn.social({
       provider: "google",
       callbackURL: next,
     });
-  };
+  } catch (error) {
+    toast.error("Google Login Failed");
+  }
+};
 
   return (
 
