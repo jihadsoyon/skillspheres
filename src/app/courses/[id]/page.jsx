@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCourseById } from "@/services/courseService";
+import { headers } from "next/headers";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -22,6 +25,14 @@ export async function generateMetadata({ params }) {
 
 const CourseDetailsPage = async ({ params }) => {
   const { id } = await params;
+
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (!session) {
+    redirect(`/login?next=/courses/${id}`);
+  }
 
   const course = await getCourseById(id);
 

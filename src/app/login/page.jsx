@@ -1,36 +1,41 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { useSearchParams } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
-
+import { useRouter, useSearchParams } from "next/navigation";
 const LoginPage = () => {
+  const router = useRouter();
 
   const searchParams = useSearchParams();
+  const next = searchParams.get("next") || "/";
 
-  const redirect =
-    searchParams.get("redirect") || "/";
 
-  const handleSubmit = async(e) => {
+
+
+
+  const handleSubmit = async (e) => {
 
     e.preventDefault();
-    
+
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const { data, error } = await authClient.signIn.email({  
+    const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: '/'
-    })
+    });
+
+    if (!error) {
+      router.push(next);
+    }
     console.log({ data, error });
-    
-    console.log(redirect)
+
   };
-    const handleGoogleSignIn = async() => {
+  const handleGoogleSignIn = async () => {
     await authClient.signIn.social({
-      provider: 'google'
-    })
-  }
+      provider: "google",
+      callbackURL: next,
+    });
+  };
 
   return (
 
@@ -76,7 +81,7 @@ const LoginPage = () => {
             className="btn btn-outline w-full"
             onClick={handleGoogleSignIn}
           >
-          <GrGoogle />  Continue with Google
+            <GrGoogle />  Continue with Google
           </button>
 
 
