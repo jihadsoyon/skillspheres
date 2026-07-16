@@ -72,7 +72,7 @@ const Navbar = () => {
               height={40}
             />
 
-            <h2 className="font-bold text-2xl">
+            <h2 className="hidden min-[500px]:block font-bold text-2xl truncate">
               SkillSphere
             </h2>
           </Link>

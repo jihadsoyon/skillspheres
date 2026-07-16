@@ -64,14 +64,14 @@ const LoginPage = () => {
             name="email"
             type="email"
             placeholder="Email"
-            className="input input-bordered w-full"
+            className="input input-bordered w-full text-white"
           />
 
           <input
             name="password"
             type="password"
             placeholder="Password"
-            className="input input-bordered w-full"
+            className="input input-bordered w-full text-white"
           />
 
           <button
@@ -85,7 +85,7 @@ const LoginPage = () => {
           </div>
 
           <button
-            className="btn btn-outline w-full"
+            className="btn btn-outline w-full "
             onClick={handleGoogleSignIn}
           >
             <GrGoogle />  Continue with Google
